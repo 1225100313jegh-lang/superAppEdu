@@ -1,0 +1,2 @@
+/// Pantalla del chat.
+

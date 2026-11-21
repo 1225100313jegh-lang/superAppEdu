@@ -1,0 +1,2 @@
+/// Pantalla de la tienda.
+

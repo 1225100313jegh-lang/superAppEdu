@@ -1,0 +1,2 @@
+/// Pantalla del monedero.
+
