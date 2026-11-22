@@ -15,7 +15,12 @@ Se crean dinero.dart y excepciones.dart con lo mínimo para el grupo "dinero y f
 Paso 12.1 - Pruebas de servicios y de ViewModels (ROJO)
 
 La prueba falla porque test/vms_test.dart importa inicio_vm.dart, monedero_vm.dart, chat_vm.dart, tienda_vm.dart, viajes_vm.dart y metricas_vm.dart, que aún no existen. Define lo que cada pantalla debe hacer: mostrar saldo, puntos y sugerencia, canjear puntos, enviar dinero con mensajes de error claros, armar el carrito conservándolo si no hay saldo, recorrer un viaje completo y calcular métricas reproducibles. En el mismo bloque, servicios_test.dart fija comercio, transporte y un día de uso que suma todos los bonos.
+![alt text](image-2.png)
 
 Paso 12.2 - ViewModels (VERDE)
 
 Se escriben los seis ViewModels. Pasa porque InicioViewModel deriva saldo, puntos, nivel y sugerencia de la plataforma, y el resto recibe solo su ContextoMiniApp, de modo que las pantallas no pueden saltarse los permisos. Cada acción atrapa los errores y los convierte con mensajeSeguro, que muestra mensajes claros sin revelar detalles internos, y llama a alCambiar para refrescar el inicio. MetricasViewModel usa datos sintéticos con una semilla fija, por eso dos instancias dan los mismos números.
+![alt text](image-3.png)
+
+##todos los test cumplidos
+![alt text](image-4.png)
